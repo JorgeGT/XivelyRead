@@ -28,7 +28,7 @@ if isempty(file) || abs(file(1).datenum-now) > 1/24
     feedID   = '426071678';
     start    = '2014-01-28T00:00:00Z';
     streams  = 'CPU_load,CPU_temp';
-    interval = '20000';
+    interval = '30000';
     limit    = '1000';
     
     % Query REST API
@@ -80,4 +80,4 @@ grid on
 %  Save figure
 set(gcf, 'Position', [0, 0, 640, 400]);
 set(gcf, 'Color', 'w');
-export_fig('TempCPU','-png','-a3') % github.com/ojwoodford/export_fig
+export_fig('TempCPU','-png','-a3','-r200') % github.com/ojwoodford/export_fig
